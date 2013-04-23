@@ -15,6 +15,7 @@ PRODUCT_PACKAGES := \
 	init.rc \
 	init.b2g.rc \
     killer \
+	miniperf-record \
 	rilproxy \
 	sources.xml \
 	MozTT-Light.ttf \
