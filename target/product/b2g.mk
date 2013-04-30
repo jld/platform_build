@@ -15,7 +15,6 @@ PRODUCT_PACKAGES := \
 	init.rc \
 	init.b2g.rc \
     killer \
-	miniperf-record \
 	rilproxy \
 	sources.xml \
 	MozTT-Light.ttf \
@@ -27,4 +26,9 @@ PRODUCT_PACKAGES := \
 ifeq ($(ENABLE_LIBRECOVERY),true)
 PRODUCT_PACKAGES += \
   librecovery
+endif
+
+ifneq ($(or $(B2G_PROFILING),0),0)
+PRODUCT_PACKAGES += \
+  miniperf-record
 endif
