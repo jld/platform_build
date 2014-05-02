@@ -386,6 +386,7 @@ ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 # the boot image, which is a collection of other images.
 INTERNAL_BOOTIMAGE_ARGS := \
 	$(addprefix --second ,$(INSTALLED_2NDBOOTLOADER_TARGET)) \
+	$(addprefix --dt ,$(INSTALLED_DTIMAGE_TARGET)) \
 	--kernel $(INSTALLED_KERNEL_TARGET) \
 	--ramdisk $(INSTALLED_RAMDISK_TARGET)
 
